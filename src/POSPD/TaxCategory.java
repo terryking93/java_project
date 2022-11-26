@@ -50,7 +50,7 @@ public class TaxCategory
 	{
 		this();
 		setCategory(category);
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("M/d/yy");
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
 		TaxRate tr = new TaxRate( LocalDate.parse(effectiveDate, formatter), new BigDecimal(taxRate));
 		this.addTaxRate(tr);
 	}
